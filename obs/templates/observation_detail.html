@@ -37,22 +37,19 @@
 
 <b>First of [[episode.observation.length]]</b>
 <br />
+
+<button class="btn btn-primary"
+   ng-click="editItem({{cix}}, episode.observation.length)"
+   ng-dblclick="editItem({{cix}}, episode.observation.length)"
+   ng-class="{selected: cix == {{cix}} && iix == episode.observation.length}"
+      ng-show="!profile.readonly"
+   >
+    Add
+    <i class="glyphicon glyphicon-plus"></i>    
+</button>
+
 <button class="btn btn-primary"
         ng-click="controller_for_episode('ObsChartCtrl', '/obs/chart/'+episode.id, 'lg')">
   View obs chart
   <i class="glyphicon glyphicon-picture"></i>
 </button>
-
-<hr />
-
-<p class="edit_item"
-   ng-click="selectItem({{cix}}, episode.observation.length)"
-   ng-dblclick="editItem({{cix}}, episode.observation.length)"
-   ng-class="{selected: cix == {{cix}} && iix == episode.observation.length}"
-   >
-  <span ng-show="!profile.readonly && ((cix == {{ forloop.counter0 }}) || (mouseCix == {{ forloop.counter0 }}))">
-    Add
-    <i class="glyphicon glyphicon-plus pull-right"></i>    
-  </span>
-</p>
-
