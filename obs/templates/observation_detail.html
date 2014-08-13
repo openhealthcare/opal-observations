@@ -1,0 +1,58 @@
+<b>[[episode.observation[0].date | shortDate]]</b>
+<span ng-show-"episode.observation[0].bp_systolic">
+  <br />
+  BP [[episode.observation[0].bp_systolic]] / [[episode.observation[0].bp_diastolic]] mm Hg
+</span>
+
+<span ng-show-"episode.observation[0].pulse">
+  <br/>
+  Pulse [[episode.observation[0].pulse]] BPM
+</span>
+
+<span ng-show-"episode.observation[0].resp_rate">
+  <br />
+  RR [[episode.observation[0].resp_rate]] BPM
+</span>
+
+<span ng-show-"episode.observation[0].sp02">
+  <br/>
+  Sp02[[episode.observation[0].sp02]] %
+</span>
+
+<span ng-show-"episode.observation[0].temp">
+  <br/>
+  Temp [[episode.observation[0].temp]] C
+</span>
+
+<span ng-show-"episode.observation[0].height">
+  <br/>
+  Height [[episode.observation[0].height]] cm
+</span>
+
+<span ng-show-"episode.observation[0].weight">
+  <br/>
+  Weight [[episode.observation[0].weight]] kg
+</span>
+<br/>
+
+<b>First of [[episode.observation.length]]</b>
+<br />
+<button class="btn btn-primary"
+        ng-click="controller_for_episode('ObsChartCtrl', '/obs/chart/'+episode.id, 'lg')">
+  View obs chart
+  <i class="glyphicon glyphicon-picture"></i>
+</button>
+
+<hr />
+
+<p class="edit_item"
+   ng-click="selectItem({{cix}}, episode.observation.length)"
+   ng-dblclick="editItem({{cix}}, episode.observation.length)"
+   ng-class="{selected: cix == {{cix}} && iix == episode.observation.length}"
+   >
+  <span ng-show="!profile.readonly && ((cix == {{ forloop.counter0 }}) || (mouseCix == {{ forloop.counter0 }}))">
+    Add
+    <i class="glyphicon glyphicon-plus pull-right"></i>    
+  </span>
+</p>
+
