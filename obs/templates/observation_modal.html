@@ -5,57 +5,65 @@
       <label class="control-label col-sm-3">BP</label>
       <div class="col-sm-4">
         <input class="form-control" type="text"
+               placeholder="Diastolic"
                ng-pattern="/^[0-9\.]+$/"
-               ng-model="editing.bp_diastolic" />
+               ng-model="editing.bp_diastolic"
+               autofocus />
       </div>
       <div class="col-sm-4">
 	<input class="form-control" type="text"
+               placeholder="Systolic"
                ng-pattern="/^[0-9\.]+$/"
-               ng-model="editing.bp_systolic"
-               autofocus/>
+               ng-model="editing.bp_systolic" />
       </div>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-3">Pulse</label>
-      <div class="col-sm-8">
+      <div class="col-sm-2">
 	<input class="form-control" ng-model="editing.pulse" ng-pattern="/^[0-9\.]+$/">
       </div>
+      <label class="control-label"><small>(bpm)</small></label>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-3">Resp rate</label>
-      <div class="col-sm-8">
+      <div class="col-sm-2">
 	<input class="form-control" type="text" ng-model="editing.resp_rate" ng-pattern="/^[0-9\.]+$/">
       </div>
+      <label class="control-label"><small>(bpm)</small></label>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-3">Sp02</label>
-      <div class="col-sm-8">
+      <div class="col-sm-2">
 	<input class="form-control" type="text" ng-model="editing['sp02']" ng-pattern="/^[0-9\.]+$/">
       </div>
+      <label class="control-label"><small>(%)</small></label>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-3">Temp</label>
-      <div class="col-sm-8">
+      <div class="col-sm-2">
 	<input class="form-control" type="text" ng-model="editing.temperature" ng-pattern="/^[0-9\.]+$/">
       </div>
+      <label class="control-label"><small>(&deg; C)</small></label>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-3">Height</label>
-      <div class="col-sm-8">
+      <div class="col-sm-2">
 	<input class="form-control" type="text" ng-model="editing.height" ng-pattern="/^[0-9\.]+$/">
       </div>
+      <label class="control-label"><small>(cm)</small></label>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-3">Weight</label>
-      <div class="col-sm-8">
+      <div class="col-sm-2">
 	<input class="form-control" type="text" ng-model="editing.weight" ng-pattern="/^[0-9\.]+$/">
       </div>
+      <label class="control-label"><small>(kg)</small></label>
     </div>
 
     <div class="form-group">
