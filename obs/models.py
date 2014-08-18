@@ -18,3 +18,4 @@ class Observation(EpisodeSubrecord):
     height       = models.FloatField(blank=True, null=True)
     weight       = models.FloatField(blank=True, null=True)
     date         = models.DateField(blank=True, null=True)
+    time         = models.IntegerField(blank=True, null=True)
