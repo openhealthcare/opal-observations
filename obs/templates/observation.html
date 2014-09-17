@@ -1,33 +1,14 @@
-<span ng-show-"[[row.[{{column_name}}[0].bp_systolic]]">
-  BP [[row.[{{column_name}}[0].bp_diastolic]] / [[row.[{{column_name}}[0].bp_systolic]] mm Hg
-</span>
+<button class="btn btn-primary"
+   ng-click="editNamedItem(row, 'observation', row.observation.length)"
+   ng-dblclick="editNamedItem(row, 'observation', row.observation.length)"
+      ng-show="!profile.readonly"
+   >
+    Add
+    <i class="glyphicon glyphicon-plus"></i>
+</button>
 
-<span ng-show-"[[row.[{{column_name}}[0].pulse]]">
-  <br/>
-  Pulse [[row.[{{column_name}}[0].pulse]] BPM
-</span>
-
-<span ng-show-"[[row.[{{column_name}}[0].resp_rate]]">
-  <br />
-  RR [[row.[{{column_name}}[0].resp_rate]] BPM
-</span>
-
-<span ng-show-"[[row.[{{column_name}}[0].sp02]]">
-  <br/>
-  Sp02[[row.[{{column_name}}[0].sp02]] %
-</span>
-
-<span ng-show-"[[row.[{{column_name}}[0].temp]]">
-  <br/>
-  Temp [[row.[{{column_name}}[0].temp]] C
-</span>
-
-<span ng-show-"[[row.[{{column_name}}[0].height]]">
-  <br/>
-  Height [[row.[{{column_name}}[0].height]] cm
-</span>
-
-<span ng-show-"[[row.[{{column_name}}[0].weight]]">
-  <br/>
-  Weight [[row.[{{column_name}}[0].weight]] kg
-</span>
+<button class="btn btn-primary"
+        ng-click="controller_for_episode('ObsChartCtrl', '/obs/chart/'+row.id, 'lg')">
+  View obs chart
+  <i class="glyphicon glyphicon-picture"></i>
+</button>
