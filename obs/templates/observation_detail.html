@@ -1,52 +1,43 @@
 <b>[[episode.observation[0].date | shortDate]] [[episode.observation[0].time]]</b>
-<span ng-show-"episode.observation[0].bp_systolic">
+<span ng-show="episode.observation[0].bp_systolic">
   <br />
   BP [[episode.observation[0].bp_diastolic]] / [[episode.observation[0].bp_systolic]] mm Hg
 </span>
 
-<span ng-show-"episode.observation[0].pulse">
+<span ng-show="episode.observation[0].pulse">
   <br/>
   Pulse [[episode.observation[0].pulse]] BPM
 </span>
 
-<span ng-show-"episode.observation[0].resp_rate">
+<span ng-show="episode.observation[0].resp_rate">
   <br />
   RR [[episode.observation[0].resp_rate]] BPM
 </span>
 
-<span ng-show-"episode.observation[0].sp02">
+<span ng-show="episode.observation[0].sp02">
   <br/>
   Sp02[[episode.observation[0].sp02]] %
 </span>
 
-<span ng-show-"episode.observation[0].temp">
+<span ng-show="episode.observation[0].temp">
   <br/>
   Temp [[episode.observation[0].temp]] C
 </span>
 
-<span ng-show-"episode.observation[0].height">
+<span ng-show="episode.observation[0].height">
   <br/>
   Height [[episode.observation[0].height]] cm
 </span>
 
-<span ng-show-"episode.observation[0].weight">
+<span ng-show="episode.observation[0].weight">
   <br/>
   Weight [[episode.observation[0].weight]] kg
 </span>
 <br/>
 
-<b>First of [[episode.observation.length]]</b>
+<b ng-show="episode.observation.length > 0">First of [[episode.observation.length]]</b>
 <br />
 
-<button class="btn btn-primary"
-   ng-click="editItem({{cix}}, episode.observation.length)"
-   ng-dblclick="editItem({{cix}}, episode.observation.length)"
-   ng-class="{selected: cix == {{cix}} && iix == episode.observation.length}"
-      ng-show="!profile.readonly"
-   >
-    Add
-    <i class="glyphicon glyphicon-plus"></i>    
-</button>
 
 <button class="btn btn-primary"
         ng-click="controller_for_episode('ObsChartCtrl', '/obs/chart/'+episode.id, 'lg')">
