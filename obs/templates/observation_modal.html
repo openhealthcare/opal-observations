@@ -29,17 +29,17 @@
     <div class="form-group">
       <label class="control-label col-sm-3">BP</label>
       <div class="col-sm-4">
+	<input class="form-control" type="text"
+               placeholder="Systolic"
+               ng-pattern="/^[0-9\.]+$/"
+               ng-model="editing.bp_systolic" />
+      </div>
+      <div class="col-sm-4">
         <input class="form-control" type="text"
                placeholder="Diastolic"
                ng-pattern="/^[0-9\.]+$/"
                ng-model="editing.bp_diastolic"
                />
-      </div>
-      <div class="col-sm-4">
-	<input class="form-control" type="text"
-               placeholder="Systolic"
-               ng-pattern="/^[0-9\.]+$/"
-               ng-model="editing.bp_systolic" />
       </div>
     </div>
 
