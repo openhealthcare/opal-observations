@@ -14,7 +14,8 @@ angular.module('opal.controllers').controller(
                     x: {
                         type: 'timeseries',
                         tick: {
-                            format: '%Y-%m-%d'
+                        //    format: '%Y-%m-%d %H:%M'
+                            fit: true
                         }
                     }
                 }
@@ -35,7 +36,12 @@ angular.module('opal.controllers').controller(
             var weight       = ['Weight'];
             
             _.map($scope.episode.observation, function(ob){
-                x.push(moment(ob.date).format('YYYY-MM-DD'));
+                if(!_.isDate(ob.datetime)){
+                    ob.datetime = moment(ob.datetime)._d;
+                }
+                console.log(ob.datetime)
+
+                x.push(ob.datetime);
                 bp_systolic.push(ob.bp_systolic);
                 bp_diastolic.push(ob.bp_diastolic);
                 pulse.push(ob.pulse);

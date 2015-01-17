@@ -7,7 +7,7 @@ from opal.models import EpisodeSubrecord
 
 class Observation(EpisodeSubrecord):
     _batch_template = True
-    _sort           = 'date'
+    _sort           = 'datetime'
 
     bp_systolic  = models.FloatField(blank=True, null=True)
     bp_diastolic = models.FloatField(blank=True, null=True)
@@ -17,5 +17,4 @@ class Observation(EpisodeSubrecord):
     temperature  = models.FloatField(blank=True, null=True)
     height       = models.FloatField(blank=True, null=True)
     weight       = models.FloatField(blank=True, null=True)
-    date         = models.DateField(blank=True, null=True)
-    time         = models.IntegerField(blank=True, null=True)
+    datetime     = models.DateTimeField(blank=True, null=True)

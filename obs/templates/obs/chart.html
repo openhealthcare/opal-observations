@@ -19,19 +19,17 @@
         </tr>
       </thead>
       <tbody>
-        {% for ob in episode.observation_set.all %}
-	<tr>
-          <td>{{ob.date}}</td>
-	  <td>{{ob.bp_systolic}}</td>
-	  <td>{{ob.bp_diastolic}}</td>
-	  <td>{{ob.pulse}}</td>
-          <td>{{ob.resp_rate}}</td>
-	  <td>{{ob.sp02}}</td>
-          <td>{{ob.temperature}}</td>
-          <td>{{ob.height}}</td>
-          <td>{{ob.weight}}</td>
+	<tr ng-repeat="ob in episode.observation">
+          <td>[[ob.datetime | shortDate ]] [[ ob.datetime | hhmm ]]</td>
+	  <td>[[ob.bp_systolic]]</td>
+	  <td>[[ob.bp_diastolic]]</td>
+	  <td>[[ob.pulse]]</td>
+          <td>[[ob.resp_rate]]</td>
+	  <td>[[ob.sp02]]</td>
+          <td>[[ob.temperature]]</td>
+          <td>[[ob.height]]</td>
+          <td>[[ob.weight]]</td>
 	</tr>
-        {% endfor %}
       </tbody>
     </table>
 
