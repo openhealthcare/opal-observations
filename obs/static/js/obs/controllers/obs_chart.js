@@ -14,8 +14,15 @@ angular.module('opal.controllers').controller(
                     x: {
                         type: 'timeseries',
                         tick: {
-                        //    format: '%Y-%m-%d %H:%M'
                             fit: true
+                        }
+                    },
+                    y: {
+                        label: { // This pushes the axes across and fixes
+                            // #12 for now.
+                            // TODO: Investigate how to do this betterer !
+                            text: ' ',
+                            position: 'outer-middle'
                         }
                     }
                 }
