@@ -1,5 +1,8 @@
 {% extends 'modal_base.html' %}
-{% block title %}Obs Chart ({{episode.patient.demographics_set.get.name}}){% endblock %}
+{% block title %}
+<i class="fa fa-line-chart"></i>
+ Obs Chart ({{episode.patient.demographics_set.get.name}})
+{% endblock %}
 {% block modal_body %}
 
 <tabset>

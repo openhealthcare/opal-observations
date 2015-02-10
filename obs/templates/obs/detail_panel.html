@@ -1,0 +1,42 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>
+      <i class="fa fa-line-chart"></i> Observations
+      <i class="fa fa-plus-circle edit pull-right"
+         ng-click="newNamedItem('observation')"></i>
+    </h3>
+  </div>
+  <table 
+     class="table table-striped table-hover search pointer"
+     ng-click="controller_for_episode('ObsChartCtrl', '/obs/chart/'+episode.id, 'lg')"
+     >
+    <thead>
+      <tr>
+        <td>Date</td>
+        <td>BP</td>
+        <td>Pulse</td>
+        <td>RR</td>
+        <td>Sp02</td>
+        <td>Temp</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="ob in episode.observation|limitTo:5">
+        <td>[[ob.datetime | shortDate ]] [[ ob.datetime | hhmm ]]</td>
+	<td>[[ob.bp_systolic]]/[[ob.bp_diastolic]]</td>
+	<td>[[ob.pulse]]</td>
+        <td>[[ob.resp_rate]]</td>
+	<td>[[ob.sp02]]</td>
+        <td>[[ob.temperature]]</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="panel-body" ng-show="episode.observation.length > 0">
+    <button class="btn btn-secondary pull-right"
+            ng-click="controller_for_episode('ObsChartCtrl', '/obs/chart/'+episode.id, 'lg')">
+      <i class="fa fa-external-link"></i>
+      See all
+    </button>
+
+  </div>
+</div>
