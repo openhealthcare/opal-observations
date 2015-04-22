@@ -4,7 +4,7 @@ Views for the OPAL observations plugin
 from django.views.generic import TemplateView
 
 from opal.models import Episode
-from opal.utils.views import LoginRequiredMixin
+from opal.core.views import LoginRequiredMixin
 
 class ObsChartView(LoginRequiredMixin, TemplateView):
     """
