@@ -1,7 +1,7 @@
 """
 Plugin definition
 """
-from opal.utils import OpalPlugin
+from opal.core.plugins import OpalPlugin
 
 from obs import urls
 
