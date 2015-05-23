@@ -1,1 +1,8 @@
-<!-- Not used -->
+<span ng-show="item.datetime">
+  Date: [[item.datetime | shortDate ]] [[ item.datetime | hhmm ]]<br />
+  BP: [[item.bp_systolic]]/[[item.bp_diastolic]]<br />
+  Pulse: [[item.pulse]]<br />
+  RR: [[item.resp_rate]]<br />
+  Sp02: [[item.sp02]]<br />
+  Temp: [[item.temperature]]
+</span>

@@ -6,9 +6,9 @@ from django.db import models
 from opal.models import EpisodeSubrecord
 
 class Observation(EpisodeSubrecord):
-    _batch_template = True
     _sort           = 'datetime'
     _icon           = 'fa fa-line-chart'
+    _list_limit     = 1
 
     bp_systolic  = models.FloatField(blank=True, null=True)
     bp_diastolic = models.FloatField(blank=True, null=True)
