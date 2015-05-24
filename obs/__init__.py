@@ -1,11 +1,11 @@
 """
 Plugin definition
 """
-from opal.core.plugins import OpalPlugin
+from opal.core import plugins
 
 from obs import urls
 
-class ObservationsPlugin(OpalPlugin):
+class ObservationsPlugin(plugins.OpalPlugin):
     """
     Plugin for obs
     """
@@ -15,3 +15,5 @@ class ObservationsPlugin(OpalPlugin):
             'js/obs/controllers/obs_chart.js'
         ]
     }
+
+plugins.register(ObservationsPlugin)
