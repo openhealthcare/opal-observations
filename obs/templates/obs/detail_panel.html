@@ -3,10 +3,10 @@
     <h3>
       <i class="fa fa-line-chart"></i> Observations
       <i class="fa fa-plus-circle edit pull-right"
-         ng-click="newNamedItem('observation')"></i>
+         ng-click="episode.recordEditor.newItem('observation')"></i>
     </h3>
   </div>
-  <table 
+  <table
      class="table table-striped table-hover search pointer"
      ng-click="controller_for_episode('ObsChartCtrl', '/obs/chart/'+episode.id, 'lg')"
      >
@@ -33,7 +33,7 @@
   </table>
   <div class="panel-body" ng-show="episode.observation.length > 0">
     <button class="btn btn-secondary pull-right"
-            ng-click="controller_for_episode('ObsChartCtrl', '/obs/chart/'+episode.id, 'lg')">
+            ng-click="open_modal('ObsChartCtrl', '/obs/chart/'+episode.id, 'lg', {episode: episode})">
       <i class="fa fa-external-link"></i>
       See all
     </button>
