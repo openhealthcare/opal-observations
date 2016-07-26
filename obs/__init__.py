@@ -12,7 +12,8 @@ class ObservationsPlugin(plugins.OpalPlugin):
     urls = urls.urlpatterns
     javascripts = {
         'opal.controllers': [
-            'js/obs/controllers/obs_chart.js'
+            'js/obs/controllers/obs_chart.js',
+            'js/obs/services/records/observation.js',
         ]
     }
 
