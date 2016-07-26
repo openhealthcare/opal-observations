@@ -2,7 +2,7 @@ module.exports = function(config){
     var browsers, basePath, coverageReporter;
     var preprocessors = {}
 
-    preprocessors[__dirname+'/../obs/static/js/obs/controllers/*.js'] = 'coverage';
+    preprocessors[__dirname+'/../obs/static/js/obs/**/*.js'] = 'coverage';
 
     if(process.env.TRAVIS){
         browsers = ["Firefox"];
