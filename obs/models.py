@@ -9,6 +9,7 @@ class Observation(EpisodeSubrecord):
     _sort           = 'datetime'
     _icon           = 'fa fa-line-chart'
     _list_limit     = 1
+    _angular_service = 'Observation'
 
     bp_systolic  = models.FloatField(blank=True, null=True)
     bp_diastolic = models.FloatField(blank=True, null=True)
