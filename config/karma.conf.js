@@ -74,6 +74,7 @@ module.exports = function(config){
             'opal/controllers/*.js',
 
              __dirname+'/../obs/static/js/obs/controllers/*.js',
+             __dirname+'/../obs/static/js/obs/services/**/*.js',
              __dirname+'/../obs/static/js/test/*.js',
         ],
 
