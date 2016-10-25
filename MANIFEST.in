@@ -1,0 +1,2 @@
+recursive-include obs/static *
+recursive-include obs/templates *
