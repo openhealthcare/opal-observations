@@ -1,3 +1,7 @@
+### 0.3.0 Release
+
+This release targets OPAL >= 0.8.0.
+
 ### 0.2.0 Release
 
 This release targets OPAL >= 0.7.0.
