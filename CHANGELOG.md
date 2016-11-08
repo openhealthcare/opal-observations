@@ -1,6 +1,7 @@
 ### 0.3.0 Release
 
 This release targets OPAL >= 0.8.0.
+Changes the detail pane to use the open modal function and to open large modals
 
 ### 0.2.0 Release
 
