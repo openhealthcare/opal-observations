@@ -1,15 +1,5 @@
-<div class="form-group">
-  <label class="control-label col-sm-3"><i class="fa fa-calendar"></i> Date & Time</label>
-  <div class="col-sm-5">
-    <input type="text" size="10" class="form-control" ng-model="editing.observation.datetime"
-           data-date-type="date"
-           data-autoclose="1" placeholder="Date" bs-datepicker>
-  </div>
-  <div class="col-sm-3">
-    <input type="text" size="8" class="form-control" ng-model="editing.observation.datetime"
-           data-autoclose="1" placeholder="Time" bs-timepicker>
-  </div>
-</div>
+{% load forms %}
+{% datetimepicker field="Observation.datetime" %}
 
 <div class="form-group">
   <label class="control-label col-sm-3">BP</label>
