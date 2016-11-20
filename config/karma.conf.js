@@ -29,6 +29,10 @@ module.exports = function(config){
         files: [
             //JASMINE,
             //JASMINE_ADAPTER,
+
+            "lib/d3/d3.js",
+            "lib/c3-0.4.10/c3.js",
+
             "lib/bower_components/angular/angular.js",
             "lib/bower_components/angular-route/angular-route.js",
             "lib/bower_components/angular-resource/angular-resource.js",
