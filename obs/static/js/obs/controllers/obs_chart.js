@@ -1,7 +1,7 @@
 angular.module('opal.controllers').controller(
-    'ObsChartCtrl', 
+    'ObsChartCtrl',
     function($scope, $timeout, $modalInstance, episode){
-        $scope.episode = episode; 
+        $scope.episode = episode;
 
         $scope.chart = function(selector, columns){
             var chart = c3.generate({
@@ -41,12 +41,11 @@ angular.module('opal.controllers').controller(
             var temp         = ['Temperature'];
             var height       = ['Height'];
             var weight       = ['Weight'];
-            
+
             _.map($scope.episode.observation, function(ob){
                 if(!_.isDate(ob.datetime)){
                     ob.datetime = moment(ob.datetime)._d;
                 }
-                console.log(ob.datetime)
 
                 x.push(ob.datetime);
                 bp_systolic.push(ob.bp_systolic);
@@ -65,16 +64,16 @@ angular.module('opal.controllers').controller(
             var sp02_chart = $scope.chart('#sp02_chart', [x, sp02]);
             var temp_chart = $scope.chart('#temperature_chart', [x, temp]);
             var hw_chart = $scope.chart('#height_weight_chart', [x, height, weight]);
-            
+
         };
 
         $timeout($scope.render_charts, 500);
 
-        // 
+        //
         // Sensible bindings for cancelling our modal
-        // 
+        //
 	$scope.cancel = function() {
 	    $modalInstance.close('cancel');
 	};
-        
+
     });
