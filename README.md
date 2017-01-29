@@ -6,10 +6,10 @@ Record patient observations (BP/Sp02/RR/ et cetera) and visualise trends over ti
 
 ## Installation 
 
-Add to your implementation's INSTALLED_APPLICATIONS.
+Add 'obs' to INSTALLED_APPLICATIONS in your implementation's `settings.py`.
 
-Run
+Then, run:
 
-    $python manage.py migrate
+    $ python manage.py migrate
 
 Add observation to your schemas as required. 
