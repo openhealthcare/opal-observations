@@ -1,5 +1,5 @@
 """
-Package definition
+Plugin definition
 """
 from opal.core import plugins
 
