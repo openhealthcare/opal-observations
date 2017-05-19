@@ -1,4 +1,5 @@
 *.sqlite
+*DS_Store
 *.pyc
 static/*
 /opal/local_settings.py
