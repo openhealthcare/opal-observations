@@ -1,3 +1,8 @@
+### 0.5.0 Release
+
+Upgrades to Opal 0.10.
+Drops support for Django < 1.10.
+
 ### 0.3.0 Release
 
 This release targets OPAL >= 0.8.0.

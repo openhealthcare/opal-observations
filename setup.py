@@ -2,7 +2,7 @@ import os
 from setuptools import setup
 
 long_desc = """
-OPAL Observations is a plugin for the OPAL web framework that allows on to record
+Opal Observations is a plugin for the Opal web framework that allows on to record
 patient observations and visualise trends over time in Opal.
 
 Source code and documentation available at https://github.com/openhealthcare/opal-observations/
@@ -13,11 +13,11 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='opal-observations',
-    version='0.3.0',
+    version='0.5.0',
     packages=['obs'],
     include_package_data=True,
     license='GPL3',
-    description='OPAL Plugin for observations',
+    description='Opal Plugin for observations',
     long_description=long_desc,
     url='http://opal.openhealthcare.org.uk/',
     author='Open Health Care UK',
