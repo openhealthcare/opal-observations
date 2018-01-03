@@ -7,5 +7,5 @@ from obs import views
 
 urlpatterns = [
 #    'obs',
-    url('/chart/(?P<episode_id>[0-9]+)/?', views.ObsChartView.as_view()),
+    url('/chart/(?P<episode_id>[0-9]+)/?', views.ObsChartView.as_view(), name="obs_chart"),
 ]
