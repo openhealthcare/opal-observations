@@ -1,5 +1,5 @@
 """
-Views for the OPAL observations plugin
+Views for the Opal observations plugin
 """
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
