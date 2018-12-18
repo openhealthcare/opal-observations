@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='observation',
             name='episode',
-            field=models.ForeignKey(to='opal.Episode'),
+            field=models.ForeignKey(to='opal.Episode', on_delete=models.CASCADE),
             preserve_default=True,
         ),
     ]

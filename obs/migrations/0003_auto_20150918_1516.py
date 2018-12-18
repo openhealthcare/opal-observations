@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='observation',
             name='created_by',
-            field=models.ForeignKey(related_name='created_obs_observation_subrecords', blank=True, to=settings.AUTH_USER_MODEL, null=True),
+            field=models.ForeignKey(related_name='created_obs_observation_subrecords', blank=True, to=settings.AUTH_USER_MODEL, null=True, on_delete=models.CASCADE),
         ),
         migrations.AddField(
             model_name='observation',
@@ -31,6 +31,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='observation',
             name='updated_by',
-            field=models.ForeignKey(related_name='updated_obs_observation_subrecords', blank=True, to=settings.AUTH_USER_MODEL, null=True),
+            field=models.ForeignKey(related_name='updated_obs_observation_subrecords', blank=True, to=settings.AUTH_USER_MODEL, null=True, on_delete=models.CASCADE),
         ),
     ]
