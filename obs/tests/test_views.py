@@ -2,7 +2,7 @@
 Unittests for obs.views
 """
 from opal.core.test import OpalTestCase
-from mock import MagicMock
+from unittest.mock import MagicMock
 
 from obs import views
 
