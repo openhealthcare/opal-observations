@@ -21,7 +21,7 @@ settings.configure(DEBUG=True,
                        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
                        'compressor.finders.CompressorFinder',),
                    COMPRESS_ROOT='/tmp/',
-                   MIDDLEWARE_CLASSES=(
+                   MIDDLEWARE=(
                        'django.middleware.common.CommonMiddleware',
                        'django.contrib.sessions.middleware.SessionMiddleware',
                        'opal.middleware.AngularCSRFRename',
@@ -41,10 +41,6 @@ settings.configure(DEBUG=True,
                                    'opal',
                                    'opal.tests',
                                    'obs',),
-                   MIGRATION_MODULES={
-                       'opal': 'opal.nomigrations',
-                       'obs': 'obs.nomigrations'
-                   }
 )
 
 from opal.core import application
