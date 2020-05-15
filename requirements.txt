@@ -1,3 +1,2 @@
-python-dateutil==2.4.2
-mock
--e git+https://github.com/openhealthcare/opal.git@v0.10.0#egg=opal
+opal==0.17.1
+
