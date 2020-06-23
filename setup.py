@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 long_desc = """
 Opal Observations is a plugin for the Opal web framework that allows on to record
@@ -14,7 +14,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='opal-observations',
     version='0.5.0',
-    packages=['obs'],
+    packages=find_packages(),
     include_package_data=True,
     license='GPL3',
     description='Opal Plugin for observations',
